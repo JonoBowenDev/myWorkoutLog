@@ -7,7 +7,11 @@ import dummyWorkoutData from "./dummyWorkoutData.js";
 import Workout from "./Workout.js"; 
 import TopNavBar from "./TopNavBar.js";  
 import BottomNavBar from "./BottomNavBar.js"; 
-import WorkoutScreen from "./WorkoutScreen/WorkoutScreen.js"; 
+import WorkoutScreen from "./workoutScreen/WorkoutScreen.js"; 
+
+import { setupRootStore } from "./models/rootStore"; 
+import { RootStoreProvider } from "./RootStoreProvider";
+import { observer } from 'mobx-react';
 
 import "react-native-gesture-handler"; 
 import { NavigationContainer } from "@react-navigation/native"; 
@@ -16,7 +20,23 @@ import { LongPressGestureHandler } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator(); 
 
-export default function App() {
+function App() {
+
+  // Setup the root store 
+  const [rootStore, setRootStore] = useState();
+
+  useEffect(() => {
+    console.log("USE EFFECT"); 
+    if (rootStore) return;
+    setupRootStore()
+    .then((rs) => {
+      setRootStore(rs);
+    })
+    .catch((err) => {
+      console.log("Failed to initialize root store");
+      console.log(err); 
+    }); 
+  }, [rootStore]); 
 
   const [workouts, setWorkouts] = useState(null); 
   const [workoutsFetched, setWorkoutsFetched] = useState(false);
@@ -36,6 +56,8 @@ export default function App() {
     setWorkoutsList(list); 
   }
 
+  if (!rootStore) return <></>;
+
   // HOME SCREEN COMPONENT (will become it's own file) 
   function HomeScreen() {
     return(
@@ -48,8 +70,21 @@ export default function App() {
     ); 
   }
 
+  const HomeScreen2 = observer(() => {
+    return(
+      <View>
+        <Text>{rootStore.count}</Text>
+        <Button title="increment" onPress={() => {rootStore.increaseCount()}} />
+      </View>
+    ); 
+  }); 
+
   return (
-    <NavigationContainer>
+    <RootStoreProvider value={rootStore}>
+
+    <HomeScreen2 />
+
+    {/* <NavigationContainer>
 
       <Stack.Navigator screenOptions={{headerShown: false}}>
 
@@ -67,9 +102,12 @@ export default function App() {
 
       </Stack.Navigator>
 
-    </NavigationContainer>
+    </NavigationContainer> */}
+
+    </RootStoreProvider>
     
   );
 }
 
+export default App; 
 
