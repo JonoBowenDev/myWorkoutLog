@@ -7,7 +7,7 @@ import dummyWorkoutData from "./dummyWorkoutData.js";
 import Workout from "./Workout.js"; 
 import TopNavBar from "./TopNavBar.js";  
 import BottomNavBar from "./BottomNavBar.js"; 
-import WorkoutScreen from "./WorkoutScreen.js"; 
+import WorkoutScreen from "./WorkoutScreen/WorkoutScreen.js"; 
 
 import "react-native-gesture-handler"; 
 import { NavigationContainer } from "@react-navigation/native"; 
