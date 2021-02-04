@@ -5,22 +5,15 @@ import { Image, ScrollView, TextInput } from 'react-native';
 import styles from "./styles.js";   
 import { useNavigation } from '@react-navigation/native';
 
-export default function Workout(props) {
+export default function Workout({ workout }) {
 
     const navigator = useNavigation(); 
-
-    const date = props.workout.startTime; 
-    const title = props.workout.title;
-
-    // Build excercise list
-    const excercises = [];   
-    for (let i=0; i < props.workout.workout.length; i++) {
-        excercises.push(`${props.workout.workout[i].excercise}, `);  
-    } 
+ 
+    const exerciseList = workout.exerciseList.map((exercise) => exercise.exerciseName); 
 
     const goToWorkout = () => {
         navigator.navigate("Workout Screen", {
-            workout: props.workout
+            workout: workout
         });  
     }
 
@@ -31,13 +24,13 @@ export default function Workout(props) {
             <Text 
             style={styles.topLevelWorkoutTitle}
             onPress={goToWorkout}>
-                {date} - {title}
+                {workout.startTime} - {workout.title}
             </Text>
 
             <Text 
             style={styles.topLevelExcercises}
             onPress={goToWorkout}>
-                {excercises}
+                {exerciseList}
             </Text>
 
         </View>

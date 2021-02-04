@@ -1,5 +1,5 @@
 import { types } from "mobx-state-tree"; 
-import {excerciseStore} from "./excerciseStore"; 
+import {exerciseStore} from "./exerciseStore"; 
 
 export const workoutStore = types
     .model("WorkoutStore", {
@@ -7,5 +7,26 @@ export const workoutStore = types
         startTime: types.maybe(types.string),
         endTime: types.maybe(types.string),
         notes: types.maybe(types.string),
-        workout: types.array(excerciseStore), 
+        exerciseList: types.array(exerciseStore), 
     })
+
+    .actions((self) => {
+        return {
+            setTitle(title) {
+                self.title = title; 
+            }, 
+            setStartTime(startTime) {
+                self.startTime = startTime; 
+            }, 
+            setEndTime(endTime) {
+                self.endTime = endTime; 
+            }, 
+            setNotes(notes) {
+                self.notes = notes; 
+            }, 
+
+            addExercise(exercise) {
+                self.exerciseList.push(exercise); 
+            }
+        }
+    }); 

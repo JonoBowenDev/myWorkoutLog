@@ -5,17 +5,11 @@ import { TextInput } from 'react-native';
 import styles from "../styles.js"; 
 import Set from "./Set.js"; 
 
-export default function Excercise(props) { 
+export default function Exercise({ exercise }) { 
 
-    const placeHolderColor = "#a6a6a6"; 
+    const placeHolderColor = "#a6a6a6";  
 
-    const [excerciseName, setExcerciseName] = useState(""); 
-    const [sets, setSets] = useState(""); 
-
-    useEffect(() => {
-        setExcerciseName(props.excercise.excercise); 
-        setSets(props.excercise.sets.map((set) => <Set set={set}/>)); 
-    }, [])
+    const sets = exercise.sets.map((set) => <Set set={set}/>)
 
     return (
         <View style={{padding: 15, borderWidth: 1, borderColor: "white", margin: 10}}>
@@ -23,8 +17,8 @@ export default function Excercise(props) {
                 Name: <TextInput 
                         placeholderTextColor = {placeHolderColor}
                         style={styles.workoutTextInput}
-                        placeholder={excerciseName}
-                        onChange={(e) => {setExcerciseName(e.target.value)}}/>
+                        placeholder={exercise.exerciseName}
+                        onChange={(e) => exercise.setExerciseName(e.target.value)}/>
             </Text>
             <Text>
                 {sets}

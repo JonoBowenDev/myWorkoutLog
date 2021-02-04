@@ -1,54 +1,15 @@
-import { useState, useEffect } from 'react';
 import React from 'react';
 import { Text, View, Button } from 'react-native';
 import { Image, ScrollView, TextInput } from 'react-native';
 import styles from "../styles.js"; 
 import TopNavBar from "../TopNavBar.js"; 
 import BottomNavBar from "../BottomNavBar.js"; 
-import { useNavigation } from '@react-navigation/native';
-import Excercise from "./Excercise.js"; 
+import Exercise from "./Exercise"; 
 
 export default function WorkoutScreen({ route }) {
-    
-    const [workout, setWorkout] = useState(""); 
 
-    const [title, setTitle] = useState(""); 
-    const [startTime, setStartTime] = useState(""); 
-    const [endTime, setEndTime] = useState(""); 
-    const [workoutNotes, setWorkoutNotes] = useState("");
-    const [excercises, setExcercises] = useState(""); 
-
-    const navigation = useNavigation(); 
-
-    useEffect(() => {
-
-        const { workout } = route.params; 
-        setWorkout(workout); 
-
-        setExcercises(workout.workout.map((excercise) => <Excercise excercise={excercise}/>)); 
-
-        setTitle(workout.title);
-        setStartTime(workout.startTime); 
-        setEndTime(workout.endTime); 
-        setWorkoutNotes(workout.workoutNotes);
-
-    }, [])
-    
-    const changeHandlerTitle = (e) => {
-        setTitle(e.target.value); 
-    }
-
-    const changeHandlerStartTime = (e) => {
-        setStartTime(e.target.value); 
-    }
-
-    const changeHandlerEndTime = (e) => {
-        setEndTime(e.target.value); 
-    }
-
-    const changeHandlerWorkoutNotes = (e) => {
-        setWorkoutNotes(e.target.value); 
-    }
+    const workout = route.params.workout; 
+    const exerciseList = workout.exerciseList.map((exercise) => <Exercise exercise={exercise}/>);
 
     const placeHolderColor = "#a6a6a6"; 
 
@@ -65,8 +26,8 @@ export default function WorkoutScreen({ route }) {
                     <TextInput 
                             style={styles.workoutTextInput}
                             placeholderTextColor= {placeHolderColor}
-                            onChange={changeHandlerTitle}
-                            placeholder={title}
+                            onChange={(e) => workout.setTitle(e.target.value)}
+                            placeholder={workout.title}
                             />
                 </View>
 
@@ -77,8 +38,8 @@ export default function WorkoutScreen({ route }) {
                     <TextInput 
                             style={styles.workoutTextInput}
                             placeholderTextColor= {placeHolderColor}
-                            onChange={changeHandlerStartTime}
-                            placeholder={startTime}
+                            onChange={(e) => workout.setStartTime(e.target.value)}
+                            placeholder={workout.startTime}
                             />
                 </View>
 
@@ -89,8 +50,8 @@ export default function WorkoutScreen({ route }) {
                     <TextInput 
                             style={styles.workoutTextInput}
                             placeholderTextColor= {placeHolderColor}
-                            onChange={changeHandlerEndTime}
-                            placeholder={endTime}
+                            onChange={(e) => workout.setEndTime(e.target.value)}
+                            placeholder={workout.endTime}
                             />
                 </View>
 
@@ -101,8 +62,8 @@ export default function WorkoutScreen({ route }) {
                     <TextInput 
                             style={styles.workoutTextInput}
                             placeholderTextColor= {placeHolderColor}
-                            onChange={changeHandlerWorkoutNotes}
-                            placeholder={workoutNotes}
+                            onChange={(e) => workout.setNotes(e.target.value)}
+                            placeholder={workout.workoutNotes}
                             />
                 </View>
 
@@ -114,7 +75,7 @@ export default function WorkoutScreen({ route }) {
 
                 <View style={styles.workoutView}>
                     <Text style={styles.workoutHeader}>
-                        {excercises} 
+                        {exerciseList} 
                     </Text>
                 </View>
             

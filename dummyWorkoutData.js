@@ -4,12 +4,12 @@ const dummyWorkoutData = [
   "startTime": "07-01-2021 13:30", 
   "endTime": "07-01-2021 15:30", 
   "workoutNotes": "", 
-  "workout": [
+  "exerciseList": [
     {
-      "excercise": "Adductor (pull)",
-      "sets": [
+      "exerciseName": "Adductor (pull)",
+      "set": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "56", 
           "reps": "21",
           "repRange": "18-20",
@@ -19,10 +19,10 @@ const dummyWorkoutData = [
       ]
     },
     {
-      "excercise": "Single Leg Lying Ham Curl",
+      "exerciseName": "Single Leg Lying Ham Curl",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "25", 
           "reps": "15",
           "repRange": "12-15",
@@ -32,10 +32,10 @@ const dummyWorkoutData = [
       ]
     }, 
     {
-      "excercise": "HS Chest Supported Pulldown (Unilateral)",
+      "exerciseName": "HS Chest Supported Pulldown (Unilateral)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "42.5", 
           "reps": "9",
           "repRange": "7-9",
@@ -43,7 +43,7 @@ const dummyWorkoutData = [
           "notes": "1 rep up"
         },
         {
-          "set": 2,
+          "setNum": "2",
           "weight": "32.5", 
           "reps": "13",
           "repRange": "12-15",
@@ -61,12 +61,12 @@ const dummyWorkoutData = [
   "startTime": "07-01-2021 13:30", 
   "endTime": "07-01-2021 15:30", 
   "workoutNotes": "", 
-  "workout": [
+  "exerciseList": [
     {
-      "excercise": "Adductor (pull)",
+      "exerciseName": "Adductor (pull)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "56", 
           "reps": "21",
           "repRange": "18-20",
@@ -76,10 +76,10 @@ const dummyWorkoutData = [
       ]
     },
     {
-      "excercise": "Single Leg Lying Ham Curl",
+      "exerciseName": "Single Leg Lying Ham Curl",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "25", 
           "reps": "15",
           "repRange": "12-15",
@@ -89,10 +89,10 @@ const dummyWorkoutData = [
       ]
     }, 
     {
-      "excercise": "HS Chest Supported Pulldown (Unilateral)",
+      "exerciseName": "HS Chest Supported Pulldown (Unilateral)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "42.5", 
           "reps": "9",
           "repRange": "7-9",
@@ -100,7 +100,7 @@ const dummyWorkoutData = [
           "notes": "1 rep up"
         },
         {
-          "set": 2,
+          "setNum": "2",
           "weight": "32.5", 
           "reps": "13",
           "repRange": "12-15",
@@ -118,12 +118,12 @@ const dummyWorkoutData = [
   "startTime": "07-01-2021 13:30", 
   "endTime": "07-01-2021 15:30", 
   "workoutNotes": "", 
-  "workout": [
+  "exerciseList": [
     {
-      "excercise": "Adductor (pull)",
+      "exerciseName": "Adductor (pull)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "56", 
           "reps": "21",
           "repRange": "18-20",
@@ -133,10 +133,10 @@ const dummyWorkoutData = [
       ]
     },
     {
-      "excercise": "Single Leg Lying Ham Curl",
+      "exerciseName": "Single Leg Lying Ham Curl",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "25", 
           "reps": "15",
           "repRange": "12-15",
@@ -146,10 +146,10 @@ const dummyWorkoutData = [
       ]
     }, 
     {
-      "excercise": "HS Chest Supported Pulldown (Unilateral)",
+      "exerciseName": "HS Chest Supported Pulldown (Unilateral)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "42.5", 
           "reps": "9",
           "repRange": "7-9",
@@ -157,7 +157,7 @@ const dummyWorkoutData = [
           "notes": "1 rep up"
         },
         {
-          "set": 2,
+          "setNum": "2",
           "weight": "32.5", 
           "reps": "13",
           "repRange": "12-15",
@@ -175,12 +175,12 @@ const dummyWorkoutData = [
   "startTime": "07-01-2021 13:30", 
   "endTime": "07-01-2021 15:30", 
   "workoutNotes": "", 
-  "workout": [
+  "exerciseList": [
     {
-      "excercise": "Adductor (pull)",
+      "exerciseName": "Adductor (pull)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "56", 
           "reps": "21",
           "repRange": "18-20",
@@ -190,10 +190,10 @@ const dummyWorkoutData = [
       ]
     },
     {
-      "excercise": "Single Leg Lying Ham Curl",
+      "exerciseName": "Single Leg Lying Ham Curl",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "25", 
           "reps": "15",
           "repRange": "12-15",
@@ -203,10 +203,10 @@ const dummyWorkoutData = [
       ]
     }, 
     {
-      "excercise": "HS Chest Supported Pulldown (Unilateral)",
+      "exerciseName": "HS Chest Supported Pulldown (Unilateral)",
       "sets": [
         {
-          "set": 1,
+          "setNum": "1",
           "weight": "42.5", 
           "reps": "9",
           "repRange": "7-9",
@@ -214,7 +214,7 @@ const dummyWorkoutData = [
           "notes": "1 rep up"
         },
         {
-          "set": 2,
+          "setNum": "2",
           "weight": "32.5", 
           "reps": "13",
           "repRange": "12-15",
