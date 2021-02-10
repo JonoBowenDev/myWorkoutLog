@@ -8,7 +8,7 @@ export default function Set({ set }) {
     const placeHolderColor = "#a6a6a6";
 
     return (
-        <View style={{color: "white"}}>
+        <View style={{color: "white", borderWidth: 1, borderColor: "white", margin: 5}}>
 
             <View style={{flexDirection: "row", padding: 10}}>
             <Text style={{color: "white", fontSize: 20, paddingRight: 10}}>
@@ -21,9 +21,9 @@ export default function Set({ set }) {
                 onChange={(e) => set.setSetNum(e.target.value)}/>
             </View>
             
-            <View style={{flexDirection: "row"}}>
+            <View style={{flexDirection: "row", padding: 10}}>
             <Text style={{color: "white", fontSize: 20, paddingRight: 10}}>
-                Weight 
+                Weight: 
             </Text>
             <TextInput 
                 placeholderTextColor={placeHolderColor}
