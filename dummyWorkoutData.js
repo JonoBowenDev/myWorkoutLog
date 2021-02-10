@@ -7,7 +7,7 @@ const dummyWorkoutData = [
   "exerciseList": [
     {
       "exerciseName": "Adductor (pull)",
-      "set": [
+      "sets": [
         {
           "setNum": "1",
           "weight": "56", 

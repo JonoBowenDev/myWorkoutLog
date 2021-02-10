@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import React from 'react';
 import { Text, View, Button } from 'react-native';
 import styles from "./styles.js";  
@@ -8,15 +7,16 @@ export default function TopNavBar() {
 
     const navigation = useNavigation(); 
 
-    const pressHandler = () => {
-        navigation.goBack();  
-    }
-
     return (
         // Date   title   excercises
-        <Text style={styles.topNavBar} onPress={pressHandler}>
-            Back                                      + new workout
+        <View style={styles.topNavBar}>
+        <Text style={styles.topNavBarBack} onPress={ navigation.goBack }>
+            Back
         </Text>
+        <Text style={styles.topNavBarNew} onPress={ () => alert("NEW WORKOUT") }>
+            + New Workout
+        </Text>
+        </View>
         
     );
 }

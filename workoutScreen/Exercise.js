@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import React from 'react';
 import { Text, View } from 'react-native';
 import { TextInput } from 'react-native';
@@ -12,19 +11,39 @@ export default function Exercise({ exercise }) {
     const sets = exercise.sets.map((set) => <Set set={set}/>)
 
     return (
-        <View style={{padding: 15, borderWidth: 1, borderColor: "white", margin: 10}}>
-            <Text>
-                Name: <TextInput 
-                        placeholderTextColor = {placeHolderColor}
-                        style={styles.workoutTextInput}
-                        placeholder={exercise.exerciseName}
-                        onChange={(e) => exercise.setExerciseName(e.target.value)}/>
-            </Text>
-            <Text>
-                {sets}
-            </Text>
-        </View>   
+        <View 
+            style={{ 
+                display: "flex", 
+                padding: 10, 
+                width: "95%",
+                margin: 10,
+                borderWidth: 1,
+                borderColor: "white" }}>
 
+            <View 
+                style={{ 
+                    padding: 10,
+                    flexDirection: "row"}}>
+
+                <Text style={{paddingRight: 10, color: "white", fontSize: 20}}>
+                    Name:
+                </Text> 
+
+                <TextInput 
+                            placeholderTextColor = {placeHolderColor}
+                            style={styles.workoutTextInput}
+                            placeholder={exercise.exerciseName}
+                            onChange={(e) => exercise.setExerciseName(e.target.value)}/>
+
+                
+                
+            </View>
+
+            <View>
+                {sets}
+            </View>
+
+        </View>
 
     ) 
 }

@@ -14,9 +14,11 @@ export default function WorkoutScreen({ route }) {
     const placeHolderColor = "#a6a6a6"; 
 
     return (
-        <View>
+        <View style={{height: "100%"}}>
             <TopNavBar />
-            <ScrollView contentContainerStyle={styles.container}>
+            <ScrollView
+            contentContainerStyle={styles.workoutScreenContainer}
+            showsVerticalScrollIndicator={false}>
             
 
                 <View style={styles.workoutView}>
@@ -73,12 +75,10 @@ export default function WorkoutScreen({ route }) {
                     </Text>
                 </View>
 
-                <View style={styles.workoutView}>
-                    <Text style={styles.workoutHeader}>
-                        {exerciseList} 
-                    </Text>
-                </View>
-            
+                {exerciseList}
+                {/* {exerciseList}
+                {exerciseList}
+                {exerciseList} */}
             
             </ScrollView>
             <BottomNavBar />

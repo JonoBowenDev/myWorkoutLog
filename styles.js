@@ -14,8 +14,12 @@ export default StyleSheet.create({
       height: "100%" 
     },
 
-    mainContainer: {
-      paddingTop: 100 
+    workoutScreenContainer: {
+      backgroundColor: '#121111',
+      alignItems: 'center',
+      // height: "100%",
+      height: 2000, // HOTFIX: Need to set to size of contained content 
+      paddingTop: 5
     }, 
 
     topLevelWorkout: {
@@ -42,17 +46,35 @@ export default StyleSheet.create({
       padding: 5,  
       textAlign: "center", 
     },
-  
+
+    // Top Nav Bar styles
+
     topNavBar: {
       color: "#fff",
       backgroundColor: "#302b2b", 
       height: "9%", 
       width: "100%", 
-      padding: 6,
-      textAlign: "right", 
+      padding: 6, 
       fontSize: 20,
-      paddingTop: 30
+      paddingTop: 30, 
+      flexDirection: "row", 
     },
+
+    topNavBarBack: {
+      color: "#fff",
+      fontSize: 20, 
+      textAlign: "left",
+      marginLeft: 10
+    },
+
+    topNavBarNew: {
+      color: "#fff",
+      fontSize: 20, 
+      textAlign: "right", 
+      marginLeft: "auto", 
+      marginRight: 10, 
+    },
+
 
     bottomNavBar: {
       color: "#fff",
@@ -67,13 +89,13 @@ export default StyleSheet.create({
       paddingBottom: 10
     },
 
-    
+  
 
     // Workout Screen styles
     workoutTextInput: {
       flex: 1.5, 
       // justifyContent: "flex-start", 
-      height: "80%", 
+      height: 40, 
       backgroundColor: "#302b2b", 
       fontSize: 20, 
       color: "#ffffff", 
@@ -90,7 +112,7 @@ export default StyleSheet.create({
     workoutView: {
       flexDirection: "row", 
       padding: 10, 
-      height: "10%", 
+      height: 75, 
       width: "95%"
     }
   });
