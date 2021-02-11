@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import styles from "./styles.js"; 
 import Workout from "./Workout.js"; 
 import TopNavBar from "./TopNavBar.js";  
@@ -20,7 +20,11 @@ const HomeScreen = observer(() => {
       <View style={styles.container}>
         <TopNavBar />
         <Text style={styles.header}>Log</Text>
-        {workoutsDisplay}
+        <ScrollView contentContainerStyle={styles.workoutScreenContainer}>
+          {workoutsDisplay}
+          {workoutsDisplay}
+          {workoutsDisplay}
+        </ScrollView>
         <BottomNavBar />
       </View>
     ); 

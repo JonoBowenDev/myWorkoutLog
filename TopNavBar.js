@@ -8,15 +8,13 @@ export default function TopNavBar() {
     const navigation = useNavigation(); 
 
     return (
-        // Date   title   excercises
         <View style={styles.topNavBar}>
-        <Text style={styles.topNavBarBack} onPress={ navigation.goBack }>
-            Back
-        </Text>
-        <Text style={styles.topNavBarNew} onPress={ () => alert("NEW WORKOUT") }>
-            + New Workout
-        </Text>
+            <Text style={styles.topNavBarBack} onPress={ navigation.goBack }>
+                Back
+            </Text>
+            <Text style={styles.topNavBarNew} onPress={ () => alert("NEW WORKOUT") }>
+                + New Workout
+            </Text>
         </View>
-        
     );
 }

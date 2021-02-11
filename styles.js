@@ -18,7 +18,7 @@ export default StyleSheet.create({
       backgroundColor: '#121111',
       alignItems: 'center',
       // height: "100%",
-      height: 2000, // HOTFIX: Need to set to size of contained content 
+      height: 3000, // HOTFIX: Need to set to size of contained content 
       paddingTop: 5
     }, 
 
@@ -52,11 +52,11 @@ export default StyleSheet.create({
     topNavBar: {
       color: "#fff",
       backgroundColor: "#302b2b", 
-      height: "9%", 
+      height: "12%",  
       width: "100%", 
       padding: 6, 
       fontSize: 20,
-      paddingTop: 30, 
+      paddingTop: 45, 
       flexDirection: "row", 
     },
 
@@ -79,14 +79,23 @@ export default StyleSheet.create({
     bottomNavBar: {
       color: "#fff",
       backgroundColor: "#302b2b", 
-      height: "9%", 
+      height: "10%", 
       width: "100%", 
       padding: 10,
+      paddingLeft: 25, 
       textAlign: "center", 
-      fontSize: 20, 
+      alignItems: "center",  
+      alignContent: "center", 
       position: "absolute", 
-      bottom: 0,
-      paddingBottom: 10
+      bottom: 0, 
+      flexDirection: "row"
+    },
+
+    bottomNavBarElement: {
+      color: "white", 
+      fontSize: 20, 
+      paddingRight: 25, 
+      textAlign: "center"
     },
 
   
