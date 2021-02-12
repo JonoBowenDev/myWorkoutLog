@@ -10,6 +10,14 @@ export const workoutStore = types
         exerciseList: types.array(exerciseStore), 
     })
 
+    .views((self) => {
+        return { 
+          getDate() {
+            return self.startTime; 
+          },
+        }
+      }) 
+
     .actions((self) => {
         return {
             setTitle(title) {

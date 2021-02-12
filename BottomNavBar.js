@@ -6,25 +6,25 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function BottomNavBar() {
 
-    const navigation = useNavigation(); 
+    const navigator = useNavigation(); 
 
     return (
         // Date   title   excercises
         <View style={styles.bottomNavBar}>
 
-            <Text style={styles.bottomNavBarElement} onPress={() => alert("LOG!")}>
+            <Text style={styles.bottomNavBarElement} onPress={() => navigator.navigate("Home Screen")}>
                 Log
             </Text>
 
-            <Text style={styles.bottomNavBarElement} onPress={() => alert("ROUTINES!")}>
+            <Text style={styles.bottomNavBarElement} onPress={() => navigator.navigate("Routines Screen")}>
                 Routines
             </Text>
 
-            <Text style={styles.bottomNavBarElement} onPress={() => alert("STATISTICS!")}>
+            <Text style={styles.bottomNavBarElement} onPress={() => navigator.navigate("Statistics Screen")}>
                 Statistics
             </Text>
 
-            <Text style={styles.bottomNavBarElement} onPress={() => alert("PROFILE!")}>
+            <Text style={styles.bottomNavBarElement} onPress={() => navigator.navigate("Profile Screen")}>
                 Profile
             </Text>
 

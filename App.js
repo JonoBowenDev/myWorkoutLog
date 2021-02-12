@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
-import WorkoutScreen from "./workoutScreen/WorkoutScreen.js"; 
+import WorkoutScreen from "./workoutScreen/WorkoutScreen"; 
 import HomeScreen from "./HomeScreen"; 
+import RoutinesScreen from "./RoutinesScreen/RoutinesScreen"; 
+import StatisticsScreen from "./StatisticsScreen/StatisticsScreen"; 
+import ProfileScreen from "./ProfileScreen/ProfileScreen"; 
+
 import { setupRootStore } from "./models/rootStore"; 
 import { RootStoreProvider } from "./RootStoreProvider";
 import "react-native-gesture-handler"; 
@@ -39,7 +43,7 @@ function App() {
         <Stack.Screen
         name="Home Screen"
         component={HomeScreen}
-        options={{title: "Home screen"}}
+        options={{title: "Home Screen"}}
         />
 
         <Stack.Screen
@@ -47,6 +51,25 @@ function App() {
         component={WorkoutScreen}
         options={{title: "Workout Screen"}}
         />
+
+        <Stack.Screen
+        name="Routines Screen"
+        component={RoutinesScreen}
+        options={{title: "Routines Screen"}}
+        />
+
+        <Stack.Screen
+        name="Statistics Screen"
+        component={StatisticsScreen}
+        options={{title: "Statistics Screen"}}
+        />
+
+        <Stack.Screen
+        name="Profile Screen"
+        component={ProfileScreen}
+        options={{title: "Profile Screen"}}
+        />
+        
 
       </Stack.Navigator>
 
