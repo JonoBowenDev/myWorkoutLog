@@ -12,8 +12,8 @@ export const workoutStore = types
 
     .views((self) => {
         return { 
-          getDate() {
-            return self.startTime; 
+          getDateFormatted() {
+            return "6th March"; 
           },
         }
       }) 

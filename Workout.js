@@ -23,7 +23,7 @@ export default function Workout({ workout }) {
             <Text 
             style={styles.topLevelWorkoutTitle}
             onPress={goToWorkout}>
-                {workout.getDate()} - {workout.title}
+                {workout.getDateFormatted()} - {workout.title}
             </Text>
 
             <Text 
