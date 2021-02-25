@@ -5,15 +5,18 @@ export const workoutStore = types
     .model("WorkoutStore", {
         title: types.maybe(types.string),
         startTime: types.maybe(types.string),
-        endTime: types.maybe(types.string),
+        endTime: types.maybe(types.string), 
         notes: types.maybe(types.string),
         exerciseList: types.array(exerciseStore), 
     })
 
     .views((self) => {
         return { 
-          getDateFormatted() {
-            return "6th March"; 
+          getStartTimeFormatted() {
+            return new Date(self.startTime); 
+          },
+          getEndTimeFormatted() {
+            return new Date(self.endTime); 
           },
         }
       }) 
@@ -24,10 +27,10 @@ export const workoutStore = types
                 self.title = title; 
             }, 
             setStartTime(startTime) {
-                self.startTime = startTime; 
+                self.startTime = startTime.toString(); 
             }, 
             setEndTime(endTime) {
-                self.endTime = endTime; 
+                self.endTime = endTime.toString(); 
             }, 
             setNotes(notes) {
                 self.notes = notes; 

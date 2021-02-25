@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native';
 export default function Workout({ workout }) {
 
     const navigator = useNavigation(); 
+
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
  
     const exerciseList = workout.exerciseList.map((exercise) => exercise.exerciseName); 
 
@@ -23,7 +25,7 @@ export default function Workout({ workout }) {
             <Text 
             style={styles.topLevelWorkoutTitle}
             onPress={goToWorkout}>
-                {workout.getDateFormatted()} - {workout.title}
+                 {months[workout.getStartTimeFormatted().getMonth()]} {workout.getStartTimeFormatted().getDate()} - {workout.title}
             </Text>
 
             <Text 

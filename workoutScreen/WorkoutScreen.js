@@ -12,30 +12,10 @@ export default function WorkoutScreen({ route }) {
 
     const [date, setDate] = useState(new Date(1598051730000));
 
-    const [mode, setMode] = useState('date');
-    const [show, setShow] = useState(true);
-
-    const onChange = (event, selectedDate) => {
+    const onChange = (selectedDate) => {
         const currentDate = selectedDate || date;
-        setShow(Platform.OS === 'ios');
-        setDate(currentDate);
+        setDate(currentDate); 
       };
-    
-      const showMode = (currentMode) => {
-        setShow(true);
-        setMode(currentMode);
-      };
-    
-      const showDatepicker = () => {
-        showMode('date');
-      };
-    
-      const showTimepicker = () => {
-        showMode('time');
-      };
-    
-    
-
 
     const workout = route.params.workout; 
     const exerciseList = workout.exerciseList.map((exercise) => <Exercise exercise={exercise}/>);
@@ -68,10 +48,10 @@ export default function WorkoutScreen({ route }) {
                     </Text>
                     <DateTimePicker 
                         testID="dateTimePicker"
-                        value={date}
+                        value={workout.getStartTimeFormatted()}
                         mode="date"
                         is24Hour={true}
-                        onChange={onChange}
+                        onChange={(selectedDate) => workout.setStartTime(selectedDate)}
                         style={styles.workoutTextInput}
                         display="default"
                         />
@@ -84,10 +64,10 @@ export default function WorkoutScreen({ route }) {
                     </Text>
                     <DateTimePicker 
                         testID="dateTimePicker"
-                        value={date}
+                        value={workout.getStartTimeFormatted()}
                         mode="time"
                         is24Hour={false}
-                        onChange={onChange}
+                        onChange={(selectedTime) => workout.setStartTime(selectedTime)}
                         style={styles.workoutTextInput}
                         display="default"
                         />
@@ -100,10 +80,10 @@ export default function WorkoutScreen({ route }) {
                     </Text>
                     <DateTimePicker 
                         testID="dateTimePicker"
-                        value={date}
+                        value={workout.getEndTimeFormatted()}
                         mode="time"
                         is24Hour={true}
-                        onChange={onChange}
+                        onChange={(selectedTime) => workout.setStartTime(selectedTime)}
                         style={styles.workoutTextInput}
                         display="default"
                         />

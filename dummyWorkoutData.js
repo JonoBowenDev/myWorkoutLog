@@ -1,8 +1,8 @@
 const dummyWorkoutData = [
 {
   "title": "Pull 1 (lat bias)",
-  "startTime": "07-01-2021 13:30", 
-  "endTime": "07-01-2021 15:30", 
+  "startTime": "Wed Jul 20 2016 06:23:01 GMT+1000 (Australian Eastern Standard Time)", 
+  "endTime": "Wed Jul 20 2016 08:23:01 GMT+1000 (Australian Eastern Standard Time)", 
   "workoutNotes": "", 
   "exerciseList": [
     {
@@ -58,8 +58,8 @@ const dummyWorkoutData = [
 
 {
   "title": "Pull 2 (lat bias)",
-  "startTime": "07-01-2021 13:30", 
-  "endTime": "07-01-2021 15:30", 
+  "startTime": "Wed Jul 21 2016 07:23:01 GMT+1000 (Australian Eastern Standard Time)", 
+  "endTime": "Wed Jul 21 2016 09:23:01 GMT+1000 (Australian Eastern Standard Time)", 
   "workoutNotes": "", 
   "exerciseList": [
     {
@@ -115,8 +115,8 @@ const dummyWorkoutData = [
 
 {
   "title": "Pull 2 (lat bias)",
-  "startTime": "07-01-2021 13:30", 
-  "endTime": "07-01-2021 15:30", 
+  "startTime": "Wed Jul 23 2016 09:23:01 GMT+1000 (Australian Eastern Standard Time)", 
+  "endTime": "Wed Jul 23 2016 11:23:01 GMT+1000 (Australian Eastern Standard Time)", 
   "workoutNotes": "", 
   "exerciseList": [
     {
@@ -172,8 +172,8 @@ const dummyWorkoutData = [
 
 {
   "title": "Pull 2 (lat bias)",
-  "startTime": "07-01-2021 13:30", 
-  "endTime": "07-01-2021 15:30", 
+  "startTime": "Wed Jul 28 2016 06:23:01 GMT+1000 (Australian Eastern Standard Time)", 
+  "endTime": "Wed Jul 28 2016 08:23:01 GMT+1000 (Australian Eastern Standard Time)", 
   "workoutNotes": "", 
   "exerciseList": [
     {
