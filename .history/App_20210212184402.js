@@ -12,8 +12,6 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native"; 
 import { createStackNavigator } from '@react-navigation/stack';
 
-// import { AuthProvider } from "./contexts/AuthContext"; 
-
 const Stack = createStackNavigator(); 
 
 function App() {
@@ -37,17 +35,10 @@ function App() {
 
   return (
     <RootStoreProvider value={rootStore}>
-    {/* <AuthProvider> */}
 
     <NavigationContainer>
 
       <Stack.Navigator screenOptions={{headerShown: false}}>
-      
-        <Stack.Screen
-        name="Profile Screen"
-        component={ProfileScreen}
-        options={{title: "Profile Screen"}}
-        />
 
         <Stack.Screen
         name="Home Screen"
@@ -73,14 +64,17 @@ function App() {
         options={{title: "Statistics Screen"}}
         />
 
-        
+        <Stack.Screen
+        name="Profile Screen"
+        component={ProfileScreen}
+        options={{title: "Profile Screen"}}
+        />
         
 
       </Stack.Navigator>
 
     </NavigationContainer>
 
-    {/* </AuthProvider> */}
     </RootStoreProvider>
     
   );

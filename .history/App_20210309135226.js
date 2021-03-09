@@ -12,8 +12,6 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native"; 
 import { createStackNavigator } from '@react-navigation/stack';
 
-// import { AuthProvider } from "./contexts/AuthContext"; 
-
 const Stack = createStackNavigator(); 
 
 function App() {
@@ -37,7 +35,7 @@ function App() {
 
   return (
     <RootStoreProvider value={rootStore}>
-    {/* <AuthProvider> */}
+    <AuthProvider>
 
     <NavigationContainer>
 
@@ -80,7 +78,7 @@ function App() {
 
     </NavigationContainer>
 
-    {/* </AuthProvider> */}
+    </AuthProvider>
     </RootStoreProvider>
     
   );

@@ -4,7 +4,7 @@ import { ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import styles from "../styles"; 
 import TopNavBar from "../TopNavBar"; 
 import BottomNavBar from "../BottomNavBar"; 
-// import { useAuth } from "../contexts/AuthContext"; 
+import { useAuth } from "../contexts/AuthContext"; 
 
 export default function ProfileScreen() {
 
@@ -12,11 +12,11 @@ export default function ProfileScreen() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(""); 
-    // const { signUp } = useAuth(); 
+    const { signUp } = useAuth(); 
     
     const signupHandler = (e) => {
         // signUp(email, password);
-        console.log(email, password);  
+        console.log(process.env.REACT_APP_FIREBASE_API_KEY) 
     }
 
     return (

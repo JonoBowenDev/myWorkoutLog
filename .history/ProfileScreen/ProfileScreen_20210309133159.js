@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { ScrollView, TextInput, TouchableOpacity } from 'react-native';
-import styles from "../styles"; 
-import TopNavBar from "../TopNavBar"; 
-import BottomNavBar from "../BottomNavBar"; 
-// import { useAuth } from "../contexts/AuthContext"; 
+import styles from "../styles.js"; 
+import TopNavBar from "../TopNavBar.js"; 
+import BottomNavBar from "../BottomNavBar.js"; 
 
 export default function ProfileScreen() {
 
@@ -12,11 +11,9 @@ export default function ProfileScreen() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(""); 
-    // const { signUp } = useAuth(); 
     
-    const signupHandler = (e) => {
-        // signUp(email, password);
-        console.log(email, password);  
+    const signupHandler = () => {
+        // sign the user up 
     }
 
     return (
@@ -47,11 +44,11 @@ export default function ProfileScreen() {
                     />
                 </View>
 
-                <View>
+                <TouchableOpacity>
                     <Text 
                         style={styles.loginBtn}
-                        onPress={signupHandler}>Signup</Text>
-                </View>
+                        onPress={signupHandler}>Login</Text>
+                </TouchableOpacity>
 
             </ScrollView>
             <BottomNavBar />
